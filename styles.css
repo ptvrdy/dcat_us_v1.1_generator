@@ -46,6 +46,11 @@ label {
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
+
+  h3 {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
   
   input[type="text"],
   input[type="password"],
