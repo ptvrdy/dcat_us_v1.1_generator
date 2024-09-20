@@ -78,6 +78,8 @@ File List:
 4. In the LibGuide Custom JS/CSS box, add the following `<script>` tag:  
 `<script src="https://raw.githubusercontent.com/ptvrdy/dcat_us_v1.1_generator/main/app.js"></script>`  
 
+<img src="pictures/custom css.png" alt="Custom JS/CSS Window in SpringShare's LibGuides">    
+
 5. Copy the GitPages HTML raw file link:  
 `https://ptvrdy.github.io/dcat_us_v1.1_generator/form.html`  
 
@@ -86,7 +88,11 @@ File List:
 7. In the Widget HTML box, add the following `<iframe>` tag:  
 `<iframe src="https://ptvrdy.github.io/dcat_us_v1.1_generator/form.html" width="100%" height="600px"></iframe>`  
 
+<img src="pictures/Add widget.png" alt="Add Media/Widget Window in LibGuides">
+
 8. Save the Widget and test functionality. Adjust width and height as needed.    
+
+<img src="pictures/Widget Complete.png" alt="Final Widget view in LibGuides">
 
 ## E. Update Log  
 
