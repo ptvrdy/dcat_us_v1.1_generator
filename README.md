@@ -30,18 +30,11 @@ E. [Update Log](#e-update-log)
 >  Name: Joesph Lambeth     
 >  Email: josephwlambeth@gmail.com  
 
-<<<<<<< HEAD
 *Disclaimer*  
-Significant portions of this code were generated using ChatGPT 4.5. 
+Significant portions of this code were generated using ChatGPT 4. 
 
 *CSS Citation*  
-=======
-*Disclaimer*
-Significant portions of this code were generated using ChatGPT 4.5. 
-
-*CSS Citation*
->>>>>>> 224ea9669983cc1f9945c3f29a53bf9482367fde
-CSS for this project was modified from "Pretty Form" by Evan DiGiambattista ([GitHub](https://github.com/edigi135)) ([CodePen](https://codepen.io/edigiam)).
+CSS for this project was modified from "Pretty Form" by Evan DiGiambattista ([GitHub](https://github.com/edigi135)) ([CodePen](https://codepen.io/edigiam)).  
 Link to CSS: <https://codepen.io/edigiam/pen/WwPPOv>  
 
 ## B. Sharing/Access and Policies Information  
@@ -73,7 +66,6 @@ File List:
 
 ## D. LibGuide Implementation Information   
 
-<<<<<<< HEAD
 1. Copy the CSS raw file link:  
 `https://raw.githubusercontent.com/ptvrdy/dcat_us_v1.1_generator/main/styles.css`
 
@@ -95,29 +87,6 @@ File List:
 `<iframe src="https://ptvrdy.github.io/dcat_us_v1.1_generator/form.html" width="100%" height="600px"></iframe>`  
 
 8. Save the Widget and test functionality. Adjust width and height as needed.    
-=======
-1. Copy the CSS raw file link:
-`https://raw.githubusercontent.com/ptvrdy/dcat_us_v1.1_generator/main/styles.css`
-
-2. In the LibGuide Custom JS/CSS box, add the following `<link>` tag:
-`<link rel="stylesheet" href="https://raw.githubusercontent.com/ptvrdy/dcat_us_v1.1_generator/main/styles.css">`  
-
-3. Copy the Javascript raw file link:
-`https://raw.githubusercontent.com/ptvrdy/dcat_us_v1.1_generator/main/app.js`
-
-4. In the LibGuide Custom JS/CSS box, add the following `<script>` tag:
-`<script src="https://raw.githubusercontent.com/ptvrdy/dcat_us_v1.1_generator/main/app.js"></script>`  
-
-5. Copy the GitPages HTML raw file link:
-`https://ptvrdy.github.io/dcat_us_v1.1_generator/form.html`  
-
-6. In the LibGuide, create new box and add a "Widget"
-
-7. In the Widget HTML box, add the following `<iframe>` tag:
-`<iframe src="https://ptvrdy.github.io/dcat_us_v1.1_generator/form.html" width="100%" height="600px"></iframe>`  
-
-8. Save the Widget and test functionality. Adjust width and height as needed.  
->>>>>>> 224ea9669983cc1f9945c3f29a53bf9482367fde
 
 ## E. Update Log  
 
