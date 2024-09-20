@@ -1,0 +1,201 @@
+/* styles.css */
+/* Adapted from: https://codepen.io/edigiam/pen/WwPPOv by Evan DiGiambattista https://github.com/edigi135 and https://codepen.io/edigiam */
+label {
+    margin-right: 10px;
+  }
+  
+  input, textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+  }
+  
+  form {
+    margin-bottom: 20px; /* Adds space between form and other elements */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    margin-top: 10px; /* Adds space between form fields and the button */
+  }
+
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  }
+  
+  form {
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select {
+    background: rgba(10, 156, 182, 0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #051018;
+    box-shadow: 0 1px 0 rgba(82, 30, 30, 0.03) inset;
+    margin-bottom: 30px;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+  }
+  
+  select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+  }
+  
+  button:hover {
+    background-color: #4583b3;  
+  }
+
+  option {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 15px 25px 15px 25px;
+    color: #FFF;
+    background-color: #366d9b;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 50%;
+    border: 1px solid #0e2233;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition-duration: 0.2s;
+  }
+
+  .button2 {
+    padding: 15px 25px 15px 25px;
+    color: #FFF;
+    background-color: #366d9b;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 50%;
+    border: 1px solid #0e2233;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition-duration: 0.2s;
+  }
+
+  .button3 {
+    padding: 5px 12px 5px 12px;
+    color: #FFF;
+    background-color: #366d9b;
+    font-size: 14px;
+    text-align: center;
+    font-style: italic;
+    border-radius: 5pxs;
+    margin-bottom: 5px;
+    transition-duration: 0.2s;
+  }
+
+
+  .button, .button3 {
+    margin: 10px auto;
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+    border: none;
+  }
+  
+  legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  }
+  
+  date {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+  
+  .number {
+    background-color: #366d9b;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+  }
+  
+  @media screen and (min-width: 480px) {
+    form {
+      max-width: 480px;
+    }
+
+  #downloadLink {
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center text */
+    font-size: 20px; /* Make text bigger */
+    padding: 10px; /* Add some padding */
+  }
+  
+  }
