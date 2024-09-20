@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <title>DCAT-US version 1.1 JSON Generator</title>
+  <script src="app.js"></script>
+</head>
+<body>
+  <h1>DCAT-US Version 1.1 JSON Generator</h1>
+  <form id="libraryItemForm">
+    <!--Title and Description-->
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" placeholder="Title" required><br><br>
+
+    <label for="description">Description or Abstract:</label><br>
+    <textarea rows="10" cols="80" id="description" name="description" placeholder="Description" required></textarea><br><br>
+
+    <!--Publisher-->
+    <label for="publisher">Publisher:</label><br>
+    <input type="text" id="publisher" name="publisher" placeholder="Publisher" required>
+
+    <button type="button" onclick="addSubOrganization()" class="button">Add Sub-Organization</button><br>
+    <div id="subOrganizationContainer"></div><br><br>
+
+    <!--Point of Contact-->
+    <label for="contactpointfn">Contact Point Full Name:</label><br>
+    <input type="text" id="contactpointfn" name="contactpointfn" placeholder="Jane Doe" required><br><br>
+
+    <label for="contactpointemail">Contact Point Email:</label><br>
+    <input type="email" id="contactpointemail" name="contactpointemail" placeholder="JaneDoe@example.com" required><br><br>
+
+    <!--DOI-->
+    <label for="doi">DOI or Handle:</label><br>
+    <input type="url" id="doi" name="doi" placeholder="https://doi.org/" required><br><br>
+
+    <!--File Group-->
+    <H3>Files:</H3>
+    <div id="fileContainer">
+        <button type="button" onclick="addFileGroup()" class="button2">Add File</button><br><br>
+    </div><br><br>
+
+    <!--Format-->
+    <label for="format">Format:</label><br>
+    <input list="formats" type="text" name="format" id="format">
+    <datalist id="formats">
+        <option value="CSV">CSV</option>
+        <option value="DOCX">DOCX</option>
+        <option value="JPG">JPG</option>
+        <option value="MD">MD</option>
+        <option value="MP3">MP3</option>
+        <option value="MP4">MP4</option>
+        <option value="PDF">PDF</option>
+        <option value="PNG">PNG</option>
+        <option value="PY">PY</option>
+        <option value="TXT">TXT</option>
+        <option value="XLSX">XLSX</option>
+        <option selected value="ZIP">ZIP</option>
+    </datalist><br><br>
+
+    <!--Keywords-->
+    <label for="keyword">Keyword or Subject Term:</label><br>
+    <div id="keywordContainer" >
+        <input type="text" id="keyword[]" placeholder="Enter keyword" name="keyword" required>
+    </div>
+    <button type="button" onclick="addKeyword()" class="button2">Add Another Keyword</button><br><br>
+        
+    <!--Language-->
+    <label for="language">Language of item (ISO 639-1):</label><br>
+    <input list="languages" type="text" name="language" id="language">
+    <datalist id="languages" required>
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="zh">Chinese</option>
+        <option value="ja">Japanese</option>
+        <option value="ru">Russian</option>
+        <option value="ar">Arabic</option>
+        <option value="pt">Portuguese</option>
+        <option value="hi">Hindi</option>
+    </datalist><br><br>
+
+    <!--License-->
+    <label for="license">License/Copyright (Link):</label><br>
+    <input list="licenses" type="text" name="license" id="license">
+    <datalist id="licenses" required>
+        <option value="https://www.apache.org/licenses/LICENSE-2.0">Apache License</option>
+        <option value="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 1.0 Universal (CC0)</option>
+        <option value="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 International Attribution (CC BY 4.0)</option>
+        <option value="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-Sharealike 4.0 International (CC BY-SA 4.0)</option>
+        <option value="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-Noncommercial 4.0 International (CC BY-NC 4.0)</option>
+        <option value="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-Noncommercial Sharealike 4.0 international (CC BY-NC-SA 4.0)</option>
+        <option value="https://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-Noderivatives 4.0 International (CC BY-ND 4.0)</option>
+        <option value="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-Noncommercial-Noderivatives 4.0 International (CC BY-NC-ND 4.0)</option>
+        <option value="https://www.eclipse.org/legal/epl-2.0/">Eclipse Public License (EPL) 2.0</option>
+        <option value="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License (GPL)</option>
+        <option value="https://www.gnu.org/licenses/lgpl-3.0.en.html">GNU Lesser General Public License (LGPL)</option>
+        <option value="https://mit-license.org/">MIT License (MIT)</option>
+        <option value="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License (MPL) 2.0</option>
+        <option value="https://opensource.org/license/osl-3-0-php">The Open Software License 3.0</option>
+        <option value="https://www.w3.org/copyright/software-license-2023/">W3C Software and Document license - 2023 version</option>
+    </datalist><br><br>
+
+    <!--Dates-->
+    <label for="issued">Publication Date:</label><br>
+    <input type="date" id="issued" name="issued" required><br><br>
+
+    <label for="modified">Most recent date the item was changed/modified:</label><br>
+    <input type="date" id="modified" name="modified" required><br><br>
+
+    <!--References-->
+    <label for="references">Report or other item this data asset references (DOI Preferred):</label><br>
+    <input type="url" id="references" name="references" placeholder="https://doi.org/"><br><br>
+
+    <!--Spatial-->
+    <label for="spatial">Spatial (The range of spatial applicability of a dataset. Could include a spacial region like a bounding box or a named place):</label><br>
+    <input type="text" id="spatial" name="spatial" list="US"><br><br>
+    <datalist id="US" required>
+        <option>United States</option>
+    </datalist>
+
+    <!--Policy Information-->
+    <label for="policystatement">Policy statement item falls under:</label><br>
+    <input list="policystatements" type="text" name="policystatement" id="policystatement">
+    <datalist id="policystatements" required>
+        <option selected value="This dataset was made public under the requirements enumerated in the U.S. Department of Transportation's 'Plan to Increase Public Access to the Results of Federally-Funded Scientific Research' Version 1.1 <https://doi.org/10.21949/1520559> and guidelines suggested by the DOT Public Access website <https://doi.org/10.21949/1503647>, in effect and current as of December 03, 2020.">DOT Policies</option>
+    </datalist><br><br>
+
+    <label for="policyurl">Link/DOI to Policy:</label><br>
+    <input type="text" list="policyurls" name="policyurl" id="policyurl">
+    <datalist id="policyurls" required>
+        <option selected value="https://doi.org/10.21949/1520559 , https://doi.org/10.21949/1503647">DOT Policies</option>
+    </datalist><br><br>
+
+    <!--Access Levels-->
+    <label for="publicaccesslevel">Public Access Level:</label><br>
+    <input type="text" list="publicaccesslevels" name="publicaccesslevel" id="publicaccesslevel">
+    <datalist id="publicaccesslevels" required>
+        <option value="public">Data asset is or could be made publicly available to all without restrictions</option>
+        <option value="restricted public">Data asset is available under certain use restrictions</option>
+        <option value="non-public">Data asset is not available to members of the public</option>
+    </datalist><br><br>
+
+    <!--Codes-->
+    <label for="bureaucode">Bureau Code (Federal agencies, combined agency and bureau code from OMB Circular A-11, Appendix C in the format of 015:010):</label><br>
+    <input type="text" list="bureaucodes" name="bureaucode" id="bureaucode">
+    <datalist id="bureaucodes" required>
+        <option selected value="021:04">DOT Bureau Code 021:04</option>
+    </datalist><br><br>
+
+    <label for="programcode">Program Code (Federal agencies, list the primary program related to this data asset, from the Federal Program Inventory. Use the format of 015:001):</label><br>
+    <input list="programcodes" type="text" name="programcode" id="programcode">
+    <datalist id="programcodes" required>
+        <option selected value="021:053">DOT Program Code 021:053</option>
+    </datalist><br><br>
+
+    <!--Fedora/CDC PID-->
+    <label for="fedorapid">DOT ONLY Fedora/CDC PID of Data Asset in "dot:[PID]" format (ex: dot:76508)</label><br>
+    <input type="text" name="fedorapid" id="fedorapid"><br><br>
+
+    <button type="button" onclick="validateForm()" class="button" console.log("Button clicked, starting JSON generation...");>Generate JSON</button>
+  </form>
+
+  <a id="downloadLink" style="display:none;">Download JSON</a>
+
+</body>
+</html>
