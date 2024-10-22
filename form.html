@@ -104,6 +104,14 @@
         <option value="https://www.w3.org/copyright/software-license-2023/">W3C Software and Document license - 2023 version</option>
     </datalist><br><br>
 
+    <!--Rights Statement-->
+    <label for="rights">Rights Statement</label><br>
+    <input list="rightsstatements" type="text" name="rightsstatement" id="rightstatement">
+    <datalist id="rightsstatements" required>
+        <option value="This dataset is open access per USDOT funding. No restrictions on access or use. Users may share, copy, and redistribute in any medium with the condition they attribute to this source.">Open Use per USDOT funding with Attribution (Creative Commons 4.0/CC BY 4.0): "This dataset is open access per USDOT funding. No restrictions on access or use. Users may share, copy, and redistribute in any medium with the condition they attribute to this source."+ String.fromCharCode(13);</option>
+        <option value="This dataset is open access per USDOT funding. No restrictions on access or use. Users may share, copy, and redistribute in any medium">Open Use per USDOT funding without Attribution (Creative Commons Zero 1.0/CC 0): This dataset is open access per USDOT funding. No restrictions on access or use. Users may share, copy, and redistribute in any medium.</option>
+    </datalist><br><br>
+
     <!--Dates-->
     <label for="issued">Publication Date:</label><br>
     <input type="date" id="issued" name="issued" required><br><br>
@@ -155,6 +163,82 @@
     <input list="programcodes" type="text" name="programcode" id="programcode">
     <datalist id="programcodes" required>
         <option selected value="021:053">DOT Program Code 021:053</option>
+    </datalist><br><br>
+
+    <!--Add Collection-->
+    <label for="collection">Is this item a part of a ROSA P Collection or will be a part of a ROSA P Collection upon submitting to ROSA P?</label><br>
+    <input type="text" list="rosapcollections" name="rosapcollection" id="rosapcollection">
+    <datalist id="rosapcollections">
+        <option value="https://doi.org/10.21949/1530859">Advisory Circulars (https://doi.org/10.21949/1530859)</option>
+        <option value="https://doi.org/10.21949/y3r3-3y74">Air Quality + Sustainable Transportation Highlights (https://doi.org/10.21949/y3r3-3y74)</option>
+        <option value="https://doi.org/10.21949/45f6-zs20">Attitudes and Behavior Surveys (https://doi.org/10.21949/45f6-zs20)</option>
+        <option value="https://doi.org/10.21949/1530821">BTS Ports (https://doi.org/10.21949/1530821)</option>
+        <option value="https://doi.org/10.21949/1530822">BTS Products (https://doi.org/10.21949/1530822)</option>
+        <option value="https://doi.org/10.21949/1530823">Civil Aeronautics Manuals (https://doi.org/10.21949/1530823)</option>
+        <option value="https://doi.org/10.21949/1530824">Civil Aeronautics Regulations (https://doi.org/10.21949/1530824)</option>
+        <option value="https://doi.org/10.21949/1530825">Civil Aerospace Medical Institute (https://doi.org/10.21949/1530825)</option>
+        <option value="https://doi.org/10.21949/1530826">Climate Change Clearinghouse (https://doi.org/10.21949/1530826)</option>
+        <option value="https://doi.org/10.21949/1530827">Committee on the Marine Transportation System (https://doi.org/10.21949/1530827)</option>
+        <option value="https://doi.org/10.21949/1530828">Commodity Flow Survey (https://doi.org/10.21949/1530828)</option>
+        <option value="https://doi.org/10.21949/1530829">FAA Advisory Circulars (https://doi.org/10.21949/1530829)</option>
+        <option value="https://doi.org/10.21949/1530830">FAA Technical Library (https://doi.org/10.21949/1530830)</option>
+        <option value="https://doi.org/10.21949/1530831">Federal Aviation Administration (https://doi.org/10.21949/1530831)</option>
+        <option value="https://doi.org/10.21949/1530860">Federal Aviation Regulations (https://doi.org/10.21949/1530860)</option>
+        <option value="https://doi.org/10.21949/1530832">Federal Committee on Statistical Methodology (https://doi.org/10.21949/1530832)</option>
+        <option value="https://doi.org/10.21949/1530833">Federal Highway Administration (https://doi.org/10.21949/1530833)</option>
+        <option value="https://doi.org/10.21949/1530834">Federal Lands (https://doi.org/10.21949/1530834)</option>
+        <option value="https://doi.org/10.21949/1530835">Federal Railroad Administration (https://doi.org/10.21949/1530835)</option>
+        <option value="https://doi.org/10.21949/1530836">Federal Transit Administration (https://doi.org/10.21949/1530836)</option>
+        <option value="https://doi.org/10.21949/1530837">Federal Transit Administration 50th Anniversary (FTA 50) (https://doi.org/10.21949/1530837)</option>
+        <option value="https://doi.org/10.21949/0v1v-7343">FHWA's Fostering Multimodal Connectivity Newsletter (https://doi.org/10.21949/0v1v-7343)</option>
+        <option value="https://doi.org/10.21949/hs6z-gp46">FHWA Highway History Website Articles (https://doi.org/10.21949/hs6z-gp46)</option>
+        <option value="https://doi.org/10.21949/b8c6-qg59">Focus: Accelerating Infrastructure Innovations (https://doi.org/10.21949/b8c6-qg59)</option>
+        <option value="https://doi.org/10.21949/eett-f241">Freight Analysis Framework (FAF) (https://doi.org/10.21949/eett-f241)</option>
+        <option value="https://doi.org/10.21949/xjbx-6t40">Highway Statistics Series: State Statistical Abstracts (https://doi.org/10.21949/xjbx-6t40)</option>
+        <option value="https://doi.org/10.21949/1530861">Historic Cab/Dot Orders (https://doi.org/10.21949/1530861)</option>
+        <option value="https://doi.org/10.21949/rqd2-ad80">Innovator (https://doi.org/10.21949/rqd2-ad80)</option>
+        <option value="https://doi.org/10.21949/1530838">Intelligent Transportation Systems Joint Program Office (https://doi.org/10.21949/1530838)</option>
+        <option value="https://doi.org/10.21949/1530839">Investigations of Aircraft Accidents 1934-1965 (https://doi.org/10.21949/1530839)</option>
+        <option value="https://doi.org/10.21949/1530840">Investigations of Railroad Accidents 1911-1993 (https://doi.org/10.21949/1530840)</option>
+        <option value="https://doi.org/10.21949/x19d-9098">ITS4US Phase 1 (https://doi.org/10.21949/x19d-9098)</option>
+        <option value="https://doi.org/10.21949/hkw8-hs16">ITS4US Phase 2 and Phase 3 (https://doi.org/10.21949/hkw8-hs16)</option>
+        <option value="https://doi.org/10.21949/e6ym-4204">Manual on Uniform Traffic Control Devices for Streets and Highways (https://doi.org/10.21949/e6ym-4204)</option>
+        <option value="https://doi.org/10.21949/1530862">Maritime Administration (https://doi.org/10.21949/1530862)</option>
+        <option value="https://doi.org/10.21949/tt5v-eh10">Memoranda & Guidance: Guidance (https://doi.org/10.21949/tt5v-eh10)</option>
+        <option value="https://doi.org/10.21949/1530841">National Conferences on Street and Highway Safety (https://doi.org/10.21949/1530841)</option>
+        <option value="https://doi.org/10.21949/1530842">National Transportation Atlas Database Archive (https://doi.org/10.21949/1530842)</option>
+        <option value="https://doi.org/10.21949/1530843">NHTSA - Behavioral Safety Research (NHTSA-BSR) (https://doi.org/10.21949/1530843)</option>
+        <option value="https://doi.org/10.21949/rv1b-xg46">NHTSA BSR Countermeasures That Work (https://doi.org/10.21949/rv1b-xg46)</option>
+        <option value="https://doi.org/10.21949/r97k-9s30">NHTSA BSR Motor Vehicle Occupant Safety Survey (https://doi.org/10.21949/r97k-9s30)</option>
+        <option value="https://doi.org/10.21949/vtcz-qs22">NHTSA BSR Traffic Safety Facts (https://doi.org/10.21949/vtcz-qs22)</option>
+        <option value="https://doi.org/10.21949/e7xd-w126">NHTSA BSR Traffic Tech (https://doi.org/10.21949/e7xd-w126)</option>
+        <option value="https://doi.org/10.21949/1530844">NHTSA - Vehicle Safety Research (NHTSA-VSR) (https://doi.org/10.21949/1530844)</option>
+        <option value="https://doi.org/10.21949/1504517">National Transportation Data Archive (https://doi.org/10.21949/1504517)</option>
+        <option value="https://doi.org/10.21949/1530845">NTL Publications (https://doi.org/10.21949/1530845)</option>
+        <option value="https://doi.org/10.21949/1530846">Papers by H.S. Fairbank - Frank Turner - T.H. Macdonald - (FTMPAPERS) (https://doi.org/10.21949/1530846)</option>
+        <option value="https://doi.org/10.21949/k6bx-0n11">Pedestrian & Bike Forum Newsletter (https://doi.org/10.21949/k6bx-0n11)</option>
+        <option value="https://doi.org/10.21949/1530847">Pipeline and Hazardous Materials Safety Administration (https://doi.org/10.21949/1530847)</option>
+        <option value="https://doi.org/10.21949/1530848">Public Access Resources (https://doi.org/10.21949/1530848)</option>
+        <option value="https://doi.org/10.21949/1530849">Public Roads (https://doi.org/10.21949/1530849)</option>
+        <option value="https://doi.org/10.21949/mh90-5s37">Realty Digest (https://doi.org/10.21949/mh90-5s37)</option>
+        <option value="https://doi.org/10.21949/0dhv-ek51">Research & Technology Transporter (https://doi.org/10.21949/0dhv-ek51)</option>
+        <option value="https://doi.org/10.21949/frsd-vv13">Retiree Memoirs (https://doi.org/10.21949/frsd-vv13)</option>
+        <option value="https://doi.org/10.21949/arkv-0k07">Roadside and Crash Risk Studies (https://doi.org/10.21949/arkv-0k07)</option>
+        <option value="https://doi.org/10.21949/nsh6-b216">Safety Compass Newsletter (https://doi.org/10.21949/nsh6-b216)</option>
+        <option value="https://doi.org/10.21949/1530850">Secretary of Transportation Speeches (https://doi.org/10.21949/1530850)</option>
+        <option value="https://doi.org/10.21949/ssbv-9r29">Special Issue - Weekly Motor Fuel Report (https://doi.org/10.21949/ssbv-9r29)</option>
+        <option value="https://doi.org/10.21949/zv5p-jf66">Successes in Stewardship Newsletter (https://doi.org/10.21949/zv5p-jf66)</option>
+        <option value="https://doi.org/10.21949/1530851">State Road Maps (https://doi.org/10.21949/1530851)</option>
+        <option value="https://doi.org/10.21949/2rwc-j622">Texas Road Maps (https://doi.org/10.21949/2rwc-j622)</option>
+        <option value="https://doi.org/10.21949/1530852">Transportation Librarians Roundtable (https://doi.org/10.21949/1530852)</option>
+        <option value="https://doi.org/10.21949/1530853">United States Federal Motor Carrier Safety Administration (https://doi.org/10.21949/1530853)</option>
+        <option value="https://doi.org/10.21949/1530855">University Transportation Centers Program (https://doi.org/10.21949/1530855)</option>
+        <option value="https://doi.org/10.21949/1530854">US DOT Public Access Data Management Plans (https://doi.org/10.21949/1530854)</option>
+        <option value="https://doi.org/10.21949/1530855">US Transportation Collection (https://doi.org/10.21949/1530855)</option>
+        <option value="https://doi.org/10.21949/1530856">US Coast Guard Circulars (https://doi.org/10.21949/1530856)</option>
+        <option value="https://doi.org/10.21949/1530857">US Transportation Collection (https://doi.org/10.21949/1530857)</option>
+        <option value="https://doi.org/10.21949/dwez-p084">Volpe Center Annual Accomplishments (https://doi.org/10.21949/dwez-p084)</option>
+        <option value="https://doi.org/10.21949/1530858">Volpe National Transportation Systems Center, Technical Reference Center (https://doi.org/10.21949/1530858)</option>
     </datalist><br><br>
 
     <!--Fedora/CDC PID-->

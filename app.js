@@ -150,13 +150,17 @@ function generateJSON() {
     const jsonData = {
         "$schema": "https://resources.data.gov/schemas/dcat-us/v1.1/schema/catalog.json",
         "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+        "@type": "dcat:Catalog",
+        "@context": "https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld",
         "dataset": [
             {
+                "@type": "dcat:Dataset",
                 "accessLevel": jsonObject.publicaccesslevel,
                 "bureauCode": bureauCode ? [bureauCode] : null,  // Ensure it's an array
                 "contactPoint": {
                     "fn": jsonObject.contactpointfn,
-                    "hasEmail": "mailto:" + jsonObject.contactpointemail
+                    "hasEmail": "mailto:" + jsonObject.contactpointemail,
+                    "@type": "vcard:Contact"
                 },
                 "dataQuality": true,
                 "description": jsonObject.description,
@@ -169,12 +173,13 @@ function generateJSON() {
                 })),
                 "format": jsonObject.format,
                 "identifier": jsonObject.doi,
+                "isPartOf": jsonObject.collection,
                 "issued": jsonObject.issued,
                 "keyword": keywords,
                 "landingPage": jsonObject.doi,
                 "language": language ? [language] : null, // Ensure it's an array
-                "modified": jsonObject.modified,
                 "license": jsonObject.license,
+                "modified": jsonObject.modified,
                 "policyStatement": jsonObject.policystatement,
                 "policyURL": jsonObject.policyurl,
                 "programCode": programCode ? [programCode] : null,  // Ensure it's an array
@@ -184,6 +189,7 @@ function generateJSON() {
                     ...(subOrgHierarchy && {"subOrganizationOf": subOrgHierarchy})
                 },
                 "references": references ? [references] : null,  // Ensure it's an array
+                "rights": jsonObject.rights,
                 "spatial": jsonObject.spatial,
                 "title": jsonObject.title,
                 "webService": jsonObject.fedorapid
