@@ -103,10 +103,8 @@ label {
     width: 440px;
     overflow: hidden;
     white-space: pre;
-    text-overflow: ellipsis;
     max-width: 100%;
     overflow-wrap: break-word;
-    -o-text-overflow: ellipsis;
     overflow-wrap: anywhere;
     white-space: pre;
   }
