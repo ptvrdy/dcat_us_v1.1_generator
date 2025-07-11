@@ -84,7 +84,7 @@ function removeField(element) {
 
 function validateForm() {
     var x = document.forms["libraryItemForm"]["fedorapid"].value;
-    if (x == "") {
+    if (x) {
         document.forms["libraryItemForm"]["fedorapid"].value = "null";
     }
     else {
